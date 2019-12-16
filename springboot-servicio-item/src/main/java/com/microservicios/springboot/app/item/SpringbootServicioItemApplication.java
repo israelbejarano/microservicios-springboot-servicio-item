@@ -6,7 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@RibbonClient(name = "servicio-productos")
+// No hace falta ribbon ahora que tenemos Eureka ya que va integrado en este ultimo, esto era para el caso sin Eureka
+// @RibbonClient(name = "servicio-productos")
 @EnableFeignClients
 @SpringBootApplication
 @EnableEurekaClient
