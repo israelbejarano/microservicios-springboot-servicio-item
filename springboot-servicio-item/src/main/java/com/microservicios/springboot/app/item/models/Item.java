@@ -1,6 +1,8 @@
 // @autor: Israel Bejarano
 package com.microservicios.springboot.app.item.models;
 
+import com.microservicios.springboot.app.commons.models.entity.Producto;
+
 public class Item {
 
 	private Producto producto;
