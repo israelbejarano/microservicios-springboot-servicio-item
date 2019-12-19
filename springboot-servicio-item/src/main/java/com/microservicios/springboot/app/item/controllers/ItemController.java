@@ -37,7 +37,7 @@ public class ItemController {
 	private Environment env;
 	
 	@Autowired
-	@Qualifier("serviceRestTemplate")
+	@Qualifier("serviceFeign")
 	private ItemService itemService;
 	
 	// este valor esta declarado en el fichero servicio-items.properties del folder config
