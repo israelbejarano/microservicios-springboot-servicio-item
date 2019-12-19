@@ -37,7 +37,7 @@ public class ItemController {
 	private Environment env;
 	
 	@Autowired
-	@Qualifier("serviceFeign")
+	@Qualifier("serviceRestTemplate")
 	private ItemService itemService;
 	
 	// este valor esta declarado en el fichero servicio-items.properties del folder config
@@ -87,7 +87,7 @@ public class ItemController {
 		return itemService.save(producto);
 	}
 	
-	@PutMapping("/editar")
+	@PutMapping("/editar/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Producto editar(@RequestBody Producto producto, @PathVariable Long id) {
 		return itemService.update(producto, id);
